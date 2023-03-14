@@ -24,18 +24,21 @@ function List() {
             {/* below is html of Character component */}
             {/* <Character />
             <Character /> */}
-            {loading ? (
-                <div>Loading...</div>
-            ) : (
-                characters.map((character) => (
-                    <Character
-                        key={character.id}
-                        name={character.name}
-                        origin={character.origin}
-                        image={character.image}
-                    />
-                ))
-            )}
+            <div className="row">
+                {/* map function */}
+                {loading ? (
+                    <div>Loading...</div>
+                ) : (
+                    characters.map((character) => (
+                        <Character
+                            key={character.id}
+                            name={character.name}
+                            origin={character.origin}
+                            image={character.image}
+                        />
+                    ))
+                )}
+            </div>
 
         </div>
     );

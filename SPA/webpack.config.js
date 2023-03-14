@@ -10,6 +10,15 @@ module.exports = {
             loader: 'babel-loader'
           },
         },
+        // add bootstrap package
+        // {
+        //   test: /\.css$/,
+        //   use: ['style-loader', 'css-loader'],
+        // }
+        {
+          test: /\.(sass|less|css)$/,
+          use: ["style-loader", "css-loader", 'sass-loader'],
+        },
       ],
     },
 
